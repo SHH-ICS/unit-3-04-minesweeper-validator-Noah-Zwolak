@@ -5,14 +5,24 @@
 def validate( block_data ):
   # Check whether the centre block is a bomb, a number, or an invalid input
   # Skip bombs, send an error on invalid input, verify numbers
-num=[2][2]
-if num=-1
-Skip
-if num=0
-print(invalid)
-if num in range(1-8)
+num=grid[1][1]
+b=0
+if num == -1:
+  break
 
-  return
+for i in range(3):
+  for j in range(3):
+    if (i, j) == (1, 1):
+      continue
+    if  grid[i][j] == -1:
+      b = b+1
+
+if num == b:
+   print("Valid middle block")
+ else
+   print("Invalid middle block")
+
+return 
 
 
 grid = [
@@ -20,4 +30,5 @@ grid = [
   [1,1,0],
   [0,0,0]
 ]
+
 print (validate(grid))
